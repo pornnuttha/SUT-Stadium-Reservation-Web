@@ -1,0 +1,27 @@
+
+  button {
+    background-color: rgb(26, 82, 238);
+    color: white;
+    padding: 30px 25px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+   
+  }
+  .center{
+    text-align: center;
+  }
+  .container{
+    padding: 50px;
+  }
+  div.bg-lion {
+
+    background-image: url("src/assets/img/wel.jpg");
+    background-repeat: no-repeat;
+
+    background-position: center ;
+    
+    background-size: 560px 560px;
+
+    }

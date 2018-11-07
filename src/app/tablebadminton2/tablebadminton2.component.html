@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../../../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- DataTables CSS -->
+    <link href="../../../vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="../../../vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://localhost:4200/tablebadminton2">SUT Stadium Reservation System</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <!-- /.dropdown -->
+                
+                <a class="navbar-brand" href="javascript:void(0);" (click)="logout()">Logout</a>
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                        <ul class="nav" id="side-menu">
+                                <br>
+                                <li>
+                                    <a (click)="type()">Dashboard</a>
+                                </li>
+                                <li>
+                                    <a  ><i class="fa fa-table fa-fw"></i> <span class="fa arrow"></span>สนามเทนนิส</a>
+                                    <ul class="nav nav-second-level">
+                                            <li>
+                                                <a (click)="tennis()">ระบบการจองสนามเทนนิส</a>
+                                             </li>
+                                            
+                                      </ul>  
+                                </li>
+                                <li>
+                                        <a  ><i class="fa fa-table fa-fw"></i> <span class="fa arrow"></span>สนามเเบดมินตัน</a>
+                                <ul class="nav nav-second-level">
+                                        <li>
+                                            <a (click)="badminton1()">ระบบการจองสนามเเบดมินตัน(สนามบน)</a>
+                                         </li>
+                                        <li>
+                                            <a (click)="badminton2()">ระบบการจองสนามเเบดมินตัน(สนามล่าง)</a>
+                                        </li>
+                                      
+                            </ul>
+                                </li>
+                                <li>
+                                        <a ><i class="fa fa-bar-chart-o fa-fw"></i>สถิติการจองในเเต่ละวัน<span class="fa arrow"></span></a>
+                                        <ul class="nav nav-second-level">
+                                            <li>
+                                                <a (click)="flowchartb()">สถิติการจองของสนามเเบดมินตัน</a>
+                                            </li>
+                                            <li>
+                                                <a (click)="flowchartt()">สถิติการจองของสนามเทนนิส</a>
+                                             </li>
+                                        </ul>
+                                        <!-- /.nav-second-level -->
+                                    </li>
+                                    <li>
+                                        <a ><i class="fa fa-bar-chart-o fa-fw"></i>สถิติการจองในรายเดือน<span class="fa arrow"></span></a>
+                                        <ul class="nav nav-second-level">
+                                            <li>
+                                                <a (click)="flowchartbm()">สถิติการจองของสนามเเบดมินตัน</a>
+                                            </li>
+                                            <li>
+                                                <a (click)="flowchartbm2()">สถิติการจองของสนามเเบดมินตัน2</a>
+                                            </li>
+                                            <li>
+                                                <a (click)="flowchartbm3()">สถิติการจองของสนามเเบดมินตัน3</a>
+                                            </li>
+                                            <li>
+                                                <a (click)="flowcharttm()">สถิติการจองของสนามเทนนิส</a>
+                                             </li>
+                                        </ul>
+                                        <!-- /.nav-second-level -->
+                                    </li>
+                            </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">ระบบการจองของสนามเเบดมินตัน</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                                สนามเเบดมินตัน(สนามล่าง)
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <thead>
+                                    <tr>
+                                        <th>สนามที่/เวลา</th>
+                                        <th>16.00-16.30</th>
+                                        <th>16.30-17.00</th>
+                                        <th>17.00-17.30</th>
+                                        <th>17.30-18.00</th>
+                                        <th>18.00-18.30</th>
+                                        <th>18.30-19.00</th>
+                                        <th>19.00-19.30</th>
+                                        <th>19.30-20.00</th>
+                                        <th>20.00-20.30</th>
+                                        <th>20.30-21.00</th>
+                                       
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                        <tr class="B8">
+                                                <td class="center">B8</td>
+                                                <td><button class={{_h11}} type="button" (click)="onClick(time_table,'b8','16:00-16:30')">{{_t11}}</button></td>
+                                                <td><button class={{_h12}} type="button" (click)="onClick(time_table,'b8','16:30-17:00')">{{_t12}}</button></td>
+                                                <td><button class={{_h13}} type="button" (click)="onClick(time_table,'b8','17:00-17:30')">{{_t13}}</button></td>
+                                                <td><button class={{_h14}} type="button" (click)="onClick(time_table,'b8','17:30-18:00')">{{_t14}}</button></td>
+                                                <td><button class={{_h15}} type="button" (click)="onClick(time_table,'b8','18:00-18:30')">{{_t15}}</button></td>
+                                                <td><button class={{_h16}} type="button" (click)="onClick(time_table,'b8','18:30-19:00')">{{_t16}}</button></td>
+                                                <td><button class={{_h17}} type="button" (click)="onClick(time_table,'b8','19:00-19:30')">{{_t17}}</button></td>
+                                                <td><button class={{_h18}} type="button" (click)="onClick(time_table,'b8','19:30-20:00')">{{_t18}}</button></td>
+                                                <td><button class={{_h19}} type="button" (click)="onClick(time_table,'b8','20:00-20:30')">{{_t19}}</button></td>
+                                                <td><button class={{_h10}} type="button" (click)="onClick(time_table,'b8','20:30-21:00')">{{_t10}}</button></td>
+                                        </tr>
+                                        <tr class="B9">
+                                                <td class="center">B9</td>
+                                                <td><button class={{_h21}} type="button" (click)="onClick(time_table,'b9','16:00-16:30')">{{_t21}}</button></td>
+                                                <td><button class={{_h22}} type="button" (click)="onClick(time_table,'b9','16:30-17:00')">{{_t22}}</button></td>
+                                                <td><button class={{_h23}} type="button" (click)="onClick(time_table,'b9','17:00-17:30')">{{_t23}}</button></td>
+                                                <td><button class={{_h24}} type="button" (click)="onClick(time_table,'b9','17:30-18:00')">{{_t24}}</button></td>
+                                                <td><button class={{_h25}} type="button" (click)="onClick(time_table,'b9','18:00-18:30')">{{_t25}}</button></td>
+                                                <td><button class={{_h26}} type="button" (click)="onClick(time_table,'b9','18:30-19:00')">{{_t26}}</button></td>
+                                                <td><button class={{_h27}} type="button" (click)="onClick(time_table,'b9','19:00-19:30')">{{_t27}}</button></td>
+                                                <td><button class={{_h28}} type="button" (click)="onClick(time_table,'b9','19:30-20:00')">{{_t28}}</button></td>
+                                                <td><button class={{_h29}} type="button" (click)="onClick(time_table,'b9','20:00-20:30')">{{_t29}}</button></td>
+                                                <td><button class={{_h20}} type="button" (click)="onClick(time_table,'b9','20:30-21:00')">{{_t20}}</button></td>
+                                        </tr>
+                                        <tr class="B10">
+                                                <td class="center">B10</td>
+                                                <td><button class={{_h31}} type="button" (click)="onClick(time_table,'b10','16:00-16:30')">{{_t31}}</button></td>
+                                                <td><button class={{_h32}} type="button" (click)="onClick(time_table,'b10','16:30-17:00')">{{_t32}}</button></td>
+                                                <td><button class={{_h33}} type="button" (click)="onClick(time_table,'b10','17:00-17:30')">{{_t33}}</button></td>
+                                                <td><button class={{_h34}} type="button" (click)="onClick(time_table,'b10','17:30-18:00')">{{_t34}}</button></td>
+                                                <td><button class={{_h35}} type="button" (click)="onClick(time_table,'b10','18:00-18:30')">{{_t35}}</button></td>
+                                                <td><button class={{_h36}} type="button" (click)="onClick(time_table,'b10','18:30-19:00')">{{_t36}}</button></td>
+                                                <td><button class={{_h37}} type="button" (click)="onClick(time_table,'b10','19:00-19:30')">{{_t37}}</button></td>
+                                                <td><button class={{_h38}} type="button" (click)="onClick(time_table,'b10','19:30-20:00')">{{_t38}}</button></td>
+                                                <td><button class={{_h39}} type="button" (click)="onClick(time_table,'b10','20:00-20:30')">{{_t39}}</button></td>
+                                                <td><button class={{_h30}} type="button" (click)="onClick(time_table,'b10','20:30-21:00')">{{_t30}}</button></td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                            <!-- /.table-responsive -->
+                            <p>   หมายเหตุ  <br> *ช่องสีเหลือง คือ ได้รับการจองเเล้วเเต่ยังไม่ยืนยัน(จองผ่านเเอปมือถือ)</p>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            
+           
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- DataTables JavaScript -->
+    <script src="../vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="../vendor/datatables-responsive/dataTables.responsive.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+            responsive: true
+        });
+    });
+    </script>
+
+</body>
+
+</html>

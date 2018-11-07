@@ -1,0 +1,29 @@
+.center {
+    text-align: center;
+}
+div.bg-lion2 {
+
+    background-image: url("src/assets/img/ni2.jpg");
+    background-repeat: no-repeat;
+
+    background-position: left bottom;
+    
+    background-size: 400px 350px;
+
+    }
+
+div.bg-lion {
+
+    background-image: url("src/assets/img/ni.jpg");
+    background-repeat: no-repeat;
+
+    background-position: right bottom;
+    
+    background-size: 400px 350px;
+
+    }
+
+    .right {
+        text-align: right;
+      }
+      

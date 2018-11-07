@@ -1,0 +1,13 @@
+.center {
+    text-align: center;
+}
+div.bg-lion {
+
+    background-image: url("src/assets/img/wel.jpg");
+    background-repeat: no-repeat;
+
+    background-position: center ;
+    
+    background-size: 560px 560px;
+
+    }
