@@ -44,10 +44,7 @@ import { AdmintennisfmComponent } from './admintennisfm/admintennisfm.component'
 import { AdminbadfmComponent } from './adminbadfm/adminbadfm.component';
 import { BadfmComponent } from './badfm/badfm.component';
 import { TennisfmComponent } from './tennisfm/tennisfm.component';
-import { Adminbadfm2Component } from './adminbadfm2/adminbadfm2.component';
-import { Adminbadfm3Component } from './adminbadfm3/adminbadfm3.component';
-import { Badfm2Component } from './badfm2/badfm2.component';
-import { Badfm3Component } from './badfm3/badfm3.component';
+
 
 @NgModule({
   declarations: [
@@ -75,10 +72,7 @@ import { Badfm3Component } from './badfm3/badfm3.component';
     AdminbadfmComponent,
     BadfmComponent,
     TennisfmComponent,
-    Adminbadfm2Component,
-    Adminbadfm3Component,
-    Badfm2Component,
-    Badfm3Component,
+    
     
   ],
   imports: [

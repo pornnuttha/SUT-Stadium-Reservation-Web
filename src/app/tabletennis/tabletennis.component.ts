@@ -107,12 +107,6 @@ export class TabletennisComponent implements OnInit {
     flowchartbm(){
       this.router.navigate(['/Badfm'], );
     }
-    flowchartbm2(){
-      this.router.navigate(['/badfm2'], );
-    }
-    flowchartbm3(){
-      this.router.navigate(['/badfm3'], );
-    }
     flowcharttm(){
       this.router.navigate(['/Tennisfm'], );
     }

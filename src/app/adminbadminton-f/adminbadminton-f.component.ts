@@ -65,12 +65,6 @@ export class AdminbadmintonFComponent implements OnInit {
   flowchartbm(){
     this.router.navigate(['/Adminbadfm'], );
   }
-  flowchartbm2(){
-    this.router.navigate(['/Adminbadfm2'], );
-  }
-  flowchartbm3(){
-    this.router.navigate(['/Adminbadfm3'], );
-  }
   flowcharttm(){
     this.router.navigate(['/Admintennisfm'], );
   }
@@ -97,7 +91,7 @@ export class AdminbadmintonFComponent implements OnInit {
     this._ch8=0;
     this._ch9=0;
     this._ch10=0;
-     this._show();
+    this._show();
      this._countB1();
      this._countB2();
      this._countB3();
@@ -119,7 +113,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch1=this._ch1+1;
       }
       console.log(this._ch1);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b1/'+ this._i+'/16:30-17:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -127,7 +121,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch1=this._ch1+1;
       }
       console.log(this._ch1);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b1/'+ this._i+'/17:00-17:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -135,7 +129,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch1=this._ch1+1;
       }
       console.log(this._ch1);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b1/'+ this._i+'/17:30-18:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -143,7 +137,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch1=this._ch1+1;
       }
       console.log(this._ch1);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b1/'+ this._i+'/18:00-18:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -151,7 +145,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch1=this._ch1+1;
       }
       console.log(this._ch1);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b1/'+ this._i+'/18:30-19:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -159,7 +153,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch1=this._ch1+1;
       }
       console.log(this._ch1);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b1/'+ this._i+'/19:00-19:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -167,7 +161,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch1=this._ch1+1;
       }
       console.log(this._ch1);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b1/'+ this._i+'/19:30-20:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -175,7 +169,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch1=this._ch1+1;
       }
       console.log(this._ch1);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b1/'+ this._i+'/20:00-20:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -183,7 +177,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch1=this._ch1+1;
       }
       console.log(this._ch1);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b1/'+ this._i+'/20:30-21:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -191,7 +185,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch1=this._ch1+1;
       }
       console.log(this._ch1);
-      this._show();
+     
     });
 
   }
@@ -204,7 +198,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch2=this._ch2+1;
       }
       console.log(this._ch2);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b2/'+ this._i+'/16:30-17:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -212,7 +206,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch2=this._ch2+1;
       }
       console.log(this._ch2);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b2/'+ this._i+'/17:00-17:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -220,7 +214,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch2=this._ch2+1;
       }
       console.log(this._ch2);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b2/'+ this._i+'/17:30-18:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -228,7 +222,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch2=this._ch2+1;
       }
       console.log(this._ch2);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b2/'+ this._i+'/18:00-18:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -236,7 +230,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch2=this._ch2+1;
       }
       console.log(this._ch2);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b2/'+ this._i+'/18:30-19:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -244,7 +238,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch2=this._ch2+1;
       }
       console.log(this._ch2);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b2/'+ this._i+'/19:00-19:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -252,7 +246,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch2=this._ch2+1;
       }
       console.log(this._ch2);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b2/'+ this._i+'/19:30-20:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -260,7 +254,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch2=this._ch2+1;
       }
       console.log(this._ch2);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b2/'+ this._i+'/20:00-20:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -268,7 +262,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch2=this._ch2+1;
       }
       console.log(this._ch2);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b2/'+ this._i+'/20:30-21:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -276,7 +270,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch2=this._ch2+1;
       }
       console.log(this._ch2);
-      this._show();
+     
     });
   }
 
@@ -288,7 +282,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch3=this._ch3+1;
       }
       console.log(this._ch3);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b3/'+ this._i+'/16:30-17:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -296,7 +290,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch3=this._ch3+1;
       }
       console.log(this._ch3);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b3/'+ this._i+'/17:00-17:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -304,7 +298,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch3=this._ch3+1;
       }
       console.log(this._ch3);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b3/'+ this._i+'/17:30-18:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -312,7 +306,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch3=this._ch3+1;
       }
       console.log(this._ch3);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b3/'+ this._i+'/18:00-18:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -320,7 +314,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch3=this._ch3+1;
       }
       console.log(this._ch3);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b3/'+ this._i+'/18:30-19:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -328,7 +322,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch3=this._ch3+1;
       }
       console.log(this._ch3);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b3/'+ this._i+'/19:00-19:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -336,7 +330,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch3=this._ch3+1;
       }
       console.log(this._ch3);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b3/'+ this._i+'/19:30-20:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -344,7 +338,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch3=this._ch1+1;
       }
       console.log(this._ch3);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b3/'+ this._i+'/20:00-20:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -352,7 +346,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch3=this._ch3+1;
       }
       console.log(this._ch3);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b3/'+ this._i+'/20:30-21:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -360,7 +354,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch3=this._ch3+1;
       }
       console.log(this._ch3);
-      this._show();
+     
     });
   }
 
@@ -372,7 +366,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch4=this._ch4+1;
       }
       console.log(this._ch4);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b4/'+ this._i+'/16:30-17:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -380,7 +374,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch4=this._ch4+1;
       }
       console.log(this._ch4);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b4/'+ this._i+'/17:00-17:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -388,7 +382,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch4=this._ch4+1;
       }
       console.log(this._ch4);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b4/'+ this._i+'/17:30-18:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -396,7 +390,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch4=this._ch4+1;
       }
       console.log(this._ch4);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b4/'+ this._i+'/18:00-18:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -404,7 +398,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch4=this._ch4+1;
       }
       console.log(this._ch4);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b4/'+ this._i+'/18:30-19:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -412,7 +406,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch4=this._ch4+1;
       }
       console.log(this._ch4);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b4/'+ this._i+'/19:00-19:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -420,7 +414,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch4=this._ch4+1;
       }
       console.log(this._ch4);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b4/'+ this._i+'/19:30-20:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -428,7 +422,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch4=this._ch4+1;
       }
       console.log(this._ch4);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b4/'+ this._i+'/20:00-20:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -436,7 +430,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch4=this._ch4+1;
       }
       console.log(this._ch4);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b4/'+ this._i+'/20:30-21:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -444,7 +438,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch4=this._ch3+1;
       }
       console.log(this._ch4);
-      this._show();
+     
     });
   }
  
@@ -456,7 +450,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch5=this._ch5+1;
       }
       console.log(this._ch5);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b5/'+ this._i+'/16:30-17:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -464,7 +458,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch5=this._ch5+1;
       }
       console.log(this._ch5);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b5/'+ this._i+'/17:00-17:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -472,7 +466,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch5=this._ch5+1;
       }
       console.log(this._ch5);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b5/'+ this._i+'/17:30-18:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -480,7 +474,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch5=this._ch5+1;
       }
       console.log(this._ch5);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b5/'+ this._i+'/18:00-18:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -488,7 +482,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch5=this._ch5+1;
       }
       console.log(this._ch5);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b5/'+ this._i+'/18:30-19:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -496,7 +490,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch5=this._ch5+1;
       }
       console.log(this._ch5);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b5/'+ this._i+'/19:00-19:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -504,7 +498,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch5=this._ch5+1;
       }
       console.log(this._ch5);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b5/'+ this._i+'/19:30-20:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -512,7 +506,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch5=this._ch5+1;
       }
       console.log(this._ch5);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b5/'+ this._i+'/20:00-20:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -520,7 +514,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch5=this._ch5+1;
       }
       console.log(this._ch5);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b5/'+ this._i+'/20:30-21:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -528,7 +522,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch5=this._ch5+1;
       }
       console.log(this._ch5);
-      this._show();
+     
     });
 
   }
@@ -540,7 +534,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch6=this._ch6+1;
       }
       console.log(this._ch6);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b6/'+ this._i+'/16:30-17:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -548,7 +542,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch6=this._ch6+1;
       }
       console.log(this._ch6);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b6/'+ this._i+'/17:00-17:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -556,7 +550,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch6=this._ch6+1;
       }
       console.log(this._ch6);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b6/'+ this._i+'/17:30-18:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -564,7 +558,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch6=this._ch6+1;
       }
       console.log(this._ch6);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b6/'+ this._i+'/18:00-18:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -572,7 +566,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch6=this._ch6+1;
       }
       console.log(this._ch6);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b6/'+ this._i+'/18:30-19:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -580,7 +574,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch6=this._ch6+1;
       }
       console.log(this._ch6);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b6/'+ this._i+'/19:00-19:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -588,7 +582,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch6=this._ch6+1;
       }
       console.log(this._ch6);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b6/'+ this._i+'/19:30-20:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -596,7 +590,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch6=this._ch6+1;
       }
       console.log(this._ch6);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b6/'+ this._i+'/20:00-20:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -604,7 +598,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch6=this._ch6+1;
       }
       console.log(this._ch6);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b6/'+ this._i+'/20:30-21:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -612,7 +606,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch6=this._ch6+1;
       }
       console.log(this._ch6);
-      this._show();
+     
     });
 
   }
@@ -625,7 +619,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch7=this._ch7+1;
       }
       console.log(this._ch7);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b7/'+ this._i+'/16:30-17:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -633,7 +627,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch7=this._ch7+1;
       }
       console.log(this._ch7);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b7/'+ this._i+'/17:00-17:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -641,7 +635,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch7=this._ch7+1;
       }
       console.log(this._ch7);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b7/'+ this._i+'/17:30-18:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -649,7 +643,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch7=this._ch7+1;
       }
       console.log(this._ch7);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b7/'+ this._i+'/18:00-18:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -657,7 +651,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch7=this._ch7+1;
       }
       console.log(this._ch7);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b7/'+ this._i+'/18:30-19:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -665,7 +659,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch7=this._ch7+1;
       }
       console.log(this._ch1);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b7/'+ this._i+'/19:00-19:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -673,7 +667,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch7=this._ch7+1;
       }
       console.log(this._ch7);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b7/'+ this._i+'/19:30-20:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -681,7 +675,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch7=this._ch7+1;
       }
       console.log(this._ch7);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b7/'+ this._i+'/20:00-20:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -689,7 +683,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch7=this._ch7+1;
       }
       console.log(this._ch7);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b7/'+ this._i+'/20:30-21:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -697,7 +691,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch7=this._ch7+1;
       }
       console.log(this._ch7);
-      this._show();
+     
     });
 
   }
@@ -709,7 +703,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch8=this._ch8+1;
       }
       console.log(this._ch8);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b8/'+ this._i+'/16:30-17:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -717,7 +711,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch8=this._ch8+1;
       }
       console.log(this._ch8);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b8/'+ this._i+'/17:00-17:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -725,7 +719,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch8=this._ch8+1;
       }
       console.log(this._ch1);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b8/'+ this._i+'/17:30-18:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -733,7 +727,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch8=this._ch8+1;
       }
       console.log(this._ch8);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b8/'+ this._i+'/18:00-18:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -741,7 +735,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch8=this._ch8+1;
       }
       console.log(this._ch8);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b8/'+ this._i+'/18:30-19:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -749,7 +743,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch8=this._ch8+1;
       }
       console.log(this._ch8);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b8/'+ this._i+'/19:00-19:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -757,7 +751,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch8=this._ch8+1;
       }
       console.log(this._ch8);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b8/'+ this._i+'/19:30-20:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -765,7 +759,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch8=this._ch8+1;
       }
       console.log(this._ch8);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b8/'+ this._i+'/20:00-20:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -773,7 +767,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch8=this._ch8+1;
       }
       console.log(this._ch8);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b8/'+ this._i+'/20:30-21:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -781,7 +775,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch8=this._ch8+1;
       }
       console.log(this._ch8);
-      this._show();
+     
     });
 
   }
@@ -794,7 +788,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch9=this._ch9+1;
       }
       console.log(this._ch9);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b9/'+ this._i+'/16:30-17:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -802,7 +796,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch9=this._ch9+1;
       }
       console.log(this._ch9);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b9/'+ this._i+'/17:00-17:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -810,7 +804,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch9=this._ch9+1;
       }
       console.log(this._ch9);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b9/'+ this._i+'/17:30-18:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -818,7 +812,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch9=this._ch9+1;
       }
       console.log(this._ch9);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b9/'+ this._i+'/18:00-18:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -826,7 +820,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch9=this._ch9+1;
       }
       console.log(this._ch9);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b9/'+ this._i+'/18:30-19:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -834,7 +828,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch9=this._ch9+1;
       }
       console.log(this._ch9);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b9/'+ this._i+'/19:00-19:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -842,7 +836,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch9=this._ch9+1;
       }
       console.log(this._ch9);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b9/'+ this._i+'/19:30-20:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -850,7 +844,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch9=this._ch9+1;
       }
       console.log(this._ch9);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b9/'+ this._i+'/20:00-20:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -858,7 +852,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch9=this._ch9+1;
       }
       console.log(this._ch9);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b9/'+ this._i+'/20:30-21:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -866,7 +860,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch9=this._ch9+1;
       }
       console.log(this._ch9);
-      this._show();
+     
     });
 
   }
@@ -879,7 +873,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch10=this._ch10+1;
       }
       console.log(this._ch10);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b10/'+ this._i+'/16:30-17:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -887,7 +881,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch10=this._ch10+1;
       }
       console.log(this._ch10);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b10/'+ this._i+'/17:00-17:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -895,7 +889,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch10=this._ch10+1;
       }
       console.log(this._ch10);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b10/'+ this._i+'/17:30-18:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -903,7 +897,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch10=this._ch10+1;
       }
       console.log(this._ch10);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b10/'+ this._i+'/18:00-18:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -911,7 +905,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch10=this._ch10+1;
       }
       console.log(this._ch10);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b10/'+ this._i+'/18:30-19:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -919,7 +913,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch10=this._ch10+1;
       }
       console.log(this._ch10);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b10/'+ this._i+'/19:00-19:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -927,7 +921,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch10=this._ch10+1;
       }
       console.log(this._ch10);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b10/'+ this._i+'/19:30-20:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -935,7 +929,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch10=this._ch10+1;
       }
       console.log(this._ch10);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b10/'+ this._i+'/20:00-20:30').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -943,7 +937,7 @@ export class AdminbadmintonFComponent implements OnInit {
         this._ch10=this._ch10+1;
       }
       console.log(this._ch10);
-      this._show();
+     
     });
     await this.afb.list('time_table/badminton/b10/'+ this._i+'/20:30-21:00').valueChanges().subscribe(items => {
       console.log(items[0]);

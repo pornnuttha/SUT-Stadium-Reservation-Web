@@ -65,12 +65,7 @@ export class Adminbad1TComponent implements OnInit {
   flowchartbm(){
     this.router.navigate(['/Adminbadfm'], );
   }
-  flowchartbm2(){
-    this.router.navigate(['/Adminbadfm2'], );
-  }
-  flowchartbm3(){
-    this.router.navigate(['/Adminbadfm3'], );
-  }
+  
   flowcharttm(){
     this.router.navigate(['/Admintennisfm'], );
   }

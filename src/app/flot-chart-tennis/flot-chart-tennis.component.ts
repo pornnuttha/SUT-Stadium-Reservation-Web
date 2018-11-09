@@ -47,12 +47,7 @@ export class FlotChartTennisComponent implements OnInit {
     flowchartbm(){
       this.router.navigate(['/Adminbadfm'], );
     }
-    flowchartbm2(){
-      this.router.navigate(['/Adminbadfm2'], );
-    }
-    flowchartbm3(){
-      this.router.navigate(['/Adminbadfm3'], );
-    }
+    
     flowcharttm(){
       this.router.navigate(['/Admintennisfm'], );
     }
@@ -106,15 +101,11 @@ this.router.navigateByUrl('/table');
         })
 
       }).catch(error => { //after valid
-        //  var code = error['code'];
         var message = error.message;
         
       });
     }
     catch (e) {
-      //ตื่นมาแก้บัค
-      //console.error("errorxxxx", e);
-      // var code = e.code;
       var message = e.message;
       message = message.split(":")[1];
       if (e.code == "auth/argument-error") {

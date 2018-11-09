@@ -66,12 +66,6 @@ flowchartb(){
 flowchartbm(){
   this.router.navigate(['/badfm'], );
 }
-flowchartbm2(){
-  this.router.navigate(['/badfm2'], );
-}
-flowchartbm3(){
-  this.router.navigate(['/badfm3'], );
-}
 flowchartt(){
   this.router.navigate(['/Tennisflowchart'], );
 }
@@ -103,7 +97,7 @@ async ngOnInit() {
         this.router.navigate([''], );
       }
     });
-    this.typeChart = 'bar';
+    this.typeChart = 'line';
     this._ch1=0;
     this._ch2=0;
     this._ch3=0;
@@ -114,7 +108,8 @@ async ngOnInit() {
     await this._countB3();
     await this._countB4();
     await this._countB5();
-    await this._show();
+    this._show();
+   
   }
   async _countB1(){
     
@@ -127,7 +122,7 @@ async ngOnInit() {
         this._ch1=this._ch1+1;
       }
       console.log(this._ch1);
-      this._show();
+     
     });
   
     await this.afb.list('time_table/tennis/t2/'+ this.__date+'/16:00-17:00').valueChanges().subscribe(items => {
@@ -136,7 +131,7 @@ async ngOnInit() {
         this._ch1=this._ch1+1;
       }
       console.log(this._ch1);
-      this._show();
+     
     });
     await this.afb.list('time_table/tennis/t3/'+ this.__date+'/16:00-17:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -144,7 +139,7 @@ async ngOnInit() {
         this._ch1=this._ch1+1;
       }
       console.log(this._ch1);
-      this._show();
+     
     });
     await this.afb.list('time_table/tennis/t4/'+ this.__date+'/16:00-17:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -152,7 +147,7 @@ async ngOnInit() {
         this._ch1=this._ch1+1;
       }
       console.log(this._ch1);
-      this._show();
+     
     });
     await this.afb.list('time_table/tennis/t5/'+ this.__date+'/16:00-17:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -160,7 +155,7 @@ async ngOnInit() {
         this._ch1=this._ch1+1;
       }
       console.log(this._ch1);
-      this._show();
+     
     });
     await this.afb.list('time_table/tennis/t6/'+ this.__date+'/16:00-17:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -168,7 +163,7 @@ async ngOnInit() {
         this._ch1=this._ch1+1;
       }
       console.log(this._ch1);
-      this._show();
+     
     });
     await this.afb.list('time_table/tennis/t7/'+ this.__date+'/16:00-17:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -176,7 +171,7 @@ async ngOnInit() {
         this._ch1=this._ch1+1;
       }
       console.log(this._ch1);
-      this._show();
+     
     });
   }
  
@@ -193,7 +188,7 @@ async ngOnInit() {
         this._ch2=this._ch2+1;
       }
       console.log(this._ch2);
-      this._show();
+     
     });
     await this.afb.list('time_table/tennis/t2/'+ this.__date+'/17:00-18:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -201,7 +196,7 @@ async ngOnInit() {
         this._ch2=this._ch2+1;
       }
       console.log(this._ch2);
-      this._show();
+     
     });
     
     await this.afb.list('time_table/tennis/t3/'+ this.__date+'/17:00-18:00').valueChanges().subscribe(items => {
@@ -210,7 +205,7 @@ async ngOnInit() {
         this._ch2=this._ch2+1;
       }
       console.log(this._ch2);
-      this._show();
+     
     });
     await this.afb.list('time_table/tennis/t4/'+ this.__date+'/17:00-18:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -218,7 +213,7 @@ async ngOnInit() {
         this._ch2=this._ch2+1;
       }
       console.log(this._ch2);
-      this._show();
+     
     });
     await this.afb.list('time_table/tennis/t5/'+ this.__date+'/17:00-18:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -226,7 +221,7 @@ async ngOnInit() {
         this._ch2=this._ch2+1;
       }
       console.log(this._ch2);
-      this._show();
+     
     });
     await this.afb.list('time_table/tennis/t6/'+ this.__date+'/17:00-18:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -234,7 +229,7 @@ async ngOnInit() {
         this._ch2=this._ch2+1;
       }
       console.log(this._ch2);
-      this._show();
+     
     });
     await this.afb.list('time_table/tennis/t7/'+ this.__date+'/17:00-18:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -242,7 +237,7 @@ async ngOnInit() {
         this._ch2=this._ch2+1;
       }
       console.log(this._ch2);
-      this._show();
+     
     });
     //await console.log('ch2= '+this._ch2+' : '+this.__date);
   }
@@ -259,7 +254,7 @@ async ngOnInit() {
         this._ch3=this._ch3+1;
       }
       console.log(this._ch3);
-      this._show();
+     
     });
     await this.afb.list('time_table/tennis/t2/'+ this.__date+'/18:00-19:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -267,7 +262,7 @@ async ngOnInit() {
         this._ch3=this._ch3+1;
       }
       console.log(this._ch3);
-      this._show();
+     
     });
    
     await this.afb.list('time_table/tennis/t3/'+ this.__date+'/18:00-19:00').valueChanges().subscribe(items => {
@@ -276,7 +271,7 @@ async ngOnInit() {
         this._ch3=this._ch3+1;
       }
       console.log(this._ch3);
-      this._show();
+     
     });
     
     await this.afb.list('time_table/tennis/t4/'+ this.__date+'/18:00-19:00').valueChanges().subscribe(items => {
@@ -285,7 +280,7 @@ async ngOnInit() {
         this._ch3=this._ch3+1;
       }
       console.log(this._ch3);
-      this._show();
+     
     });
     await this.afb.list('time_table/tennis/t5/'+ this.__date+'/18:00-19:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -293,7 +288,7 @@ async ngOnInit() {
         this._ch3=this._ch3+1;
       }
       console.log(this._ch3);
-      this._show();
+     
     });
     await this.afb.list('time_table/tennis/t6/'+ this.__date+'/18:00-19:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -301,7 +296,7 @@ async ngOnInit() {
         this._ch3=this._ch3+1;
       }
       console.log(this._ch3);
-      this._show();
+     
     });   
     await this.afb.list('time_table/tennis/t7/'+ this.__date+'/18:00-19:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -309,7 +304,7 @@ async ngOnInit() {
         this._ch3=this._ch3+1;
       }
       console.log(this._ch3);
-      this._show();
+     
     });
   }
   }
@@ -323,7 +318,7 @@ async ngOnInit() {
         this._ch4=this._ch4+1;
       }
       console.log(this._ch4);
-      this._show();
+     
     });
     await this.afb.list('time_table/tennis/t2/'+ this.__date+'/19:00-20:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -331,7 +326,7 @@ async ngOnInit() {
         this._ch4=this._ch4+1;
       }
       console.log(this._ch4);
-      this._show();
+     
     });
     await this.afb.list('time_table/tennis/t3/'+ this.__date+'/19:00-20:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -339,7 +334,7 @@ async ngOnInit() {
         this._ch4=this._ch4+1;
       }
       console.log(this._ch4);
-      this._show();
+     
     });
    
     await this.afb.list('time_table/tennis/t4/'+ this.__date+'/19:00-20:00').valueChanges().subscribe(items => {
@@ -348,7 +343,7 @@ async ngOnInit() {
         this._ch4=this._ch4+1;
       }
       console.log(this._ch4);
-      this._show();
+     
     });
     await this.afb.list('time_table/tennis/t5/'+ this.__date+'/19:00-20:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -356,7 +351,7 @@ async ngOnInit() {
         this._ch4=this._ch4+1;
       }
       console.log(this._ch4);
-      this._show();
+     
     });
     await this.afb.list('time_table/tennis/t6/'+ this.__date+'/19:00-20:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -364,7 +359,7 @@ async ngOnInit() {
         this._ch4=this._ch4+1;
       }
       console.log(this._ch4);
-      this._show();
+     
     });
     await this.afb.list('time_table/tennis/t7/'+ this.__date+'/19:00-20:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -372,7 +367,7 @@ async ngOnInit() {
         this._ch4=this._ch4+1;
       }
       console.log(this._ch4);
-      this._show();
+     
     });
   }
 }
@@ -386,7 +381,7 @@ async ngOnInit() {
         this._ch5=this._ch5+1;
       }
       console.log(this._ch5);
-      this._show();
+     
     });
     await this.afb.list('time_table/tennis/t2/'+ this.__date+'/20:00-21:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -394,7 +389,7 @@ async ngOnInit() {
         this._ch5=this._ch5+1;
       }
       console.log(this._ch5);
-      this._show();
+     
     });
     await this.afb.list('time_table/tennis/t3/'+ this.__date+'/20:00-21:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -402,7 +397,7 @@ async ngOnInit() {
         this._ch5=this._ch5+1;
       }
       console.log(this._ch5);
-      this._show();
+     
     });
     await this.afb.list('time_table/tennis/t4/'+ this.__date+'/20:00-21:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -410,7 +405,7 @@ async ngOnInit() {
         this._ch5=this._ch5+1;
       }
       console.log(this._ch5);
-      this._show();
+     
     });
    
     await this.afb.list('time_table/tennis/t5/'+ this.__date+'/20:00-21:00').valueChanges().subscribe(items => {
@@ -419,7 +414,7 @@ async ngOnInit() {
         this._ch5=this._ch5+1;
       }
       console.log(this._ch5);
-      this._show();
+     
     });
     await this.afb.list('time_table/tennis/t6/'+ this.__date+'/20:00-21:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -427,7 +422,7 @@ async ngOnInit() {
         this._ch5=this._ch5+1;
       }
       console.log(this._ch5);
-      this._show();
+     
     });
     await this.afb.list('time_table/tennis/t7/'+ this.__date+'/20:00-21:00').valueChanges().subscribe(items => {
       console.log(items[0]);
@@ -448,7 +443,7 @@ async ngOnInit() {
         {
          
           data: [this._ch1,this._ch2,this._ch3,this._ch4, this._ch5,],
-         
+          backgroundColor : ['#1abc9c', '#3498db', '#9b59b6', '#B8860B', '#f39c12','#339900','#6A5ACD']
         }
       ]
     };

@@ -65,12 +65,7 @@ export class TennisflowchartComponent implements OnInit {
   flowchartbm(){
     this.router.navigate(['/Badfm'], );
   }
-  flowchartbm2(){
-    this.router.navigate(['/badfm2'], );
-  }
-  flowchartbm3(){
-    this.router.navigate(['/badfm3'], );
-  }
+  
   flowcharttm(){
     this.router.navigate(['/Tennisfm'], );
   }
@@ -92,7 +87,7 @@ export class TennisflowchartComponent implements OnInit {
     this._ch5=0;
     this._ch6=0;
     this._ch7=0;
-    this._show();
+   
     await this._countB1();
     await this._countB2();
     await this._countB3();
@@ -100,6 +95,7 @@ export class TennisflowchartComponent implements OnInit {
     await this._countB5();
     await this._countB6();
     await this._countB7();
+    this._show();
 
   }
     async _countB1(){
@@ -110,7 +106,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch1=this._ch1+1;
         }
         console.log(this._ch1);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t1/'+ this._i+'/17:00-18:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -118,7 +114,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch1=this._ch1+1;
         }
         console.log(this._ch1);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t1/'+ this._i+'/18:00-19:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -126,7 +122,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch1=this._ch1+1;
         }
         console.log(this._ch1);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t1/'+ this._i+'/19:00-20:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -134,7 +130,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch1=this._ch1+1;
         }
         console.log(this._ch1);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t1/'+ this._i+'/20:00-21:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -142,7 +138,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch1=this._ch1+1;
         }
         console.log(this._ch1);
-        this._show();
+       
       });
      
     }
@@ -155,7 +151,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch2=this._ch2+1;
         }
         console.log(this._ch2);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t2/'+ this._i+'/17:00-18:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -163,7 +159,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch2=this._ch2+1;
         }
         console.log(this._ch2);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t2/'+ this._i+'/18:00-19:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -171,7 +167,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch2=this._ch2+1;
         }
         console.log(this._ch2);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t2/'+ this._i+'/19:00-20:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -179,7 +175,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch2=this._ch2+1;
         }
         console.log(this._ch2);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t2/'+ this._i+'/20:00-21:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -187,7 +183,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch2=this._ch2+1;
         }
         console.log(this._ch2);
-        this._show();
+       
       });
      
     }
@@ -200,7 +196,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch3=this._ch3+1;
         }
         console.log(this._ch3);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t3/'+ this._i+'/17:00-18:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -208,7 +204,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch3=this._ch3+1;
         }
         console.log(this._ch3);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t3/'+ this._i+'/18:00-19:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -216,7 +212,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch3=this._ch3+1;
         }
         console.log(this._ch3);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t3/'+ this._i+'/19:00-20:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -224,7 +220,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch3=this._ch3+1;
         }
         console.log(this._ch3);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t3/'+ this._i+'/20:00-21:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -232,7 +228,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch3=this._ch3+1;
         }
         console.log(this._ch3);
-        this._show();
+       
       });
     }
   
@@ -244,7 +240,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch4=this._ch4+1;
         }
         console.log(this._ch4);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t4/'+ this._i+'/17:00-18:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -252,7 +248,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch4=this._ch4+1;
         }
         console.log(this._ch4);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t4/'+ this._i+'/18:00-19:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -260,7 +256,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch4=this._ch4+1;
         }
         console.log(this._ch4);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t4/'+ this._i+'/19:00-20:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -268,7 +264,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch4=this._ch4+1;
         }
         console.log(this._ch4);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t4/'+ this._i+'/20:00-21:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -276,7 +272,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch4=this._ch4+1;
         }
         console.log(this._ch4);
-        this._show();
+       
       });
     }
    
@@ -288,7 +284,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch5=this._ch5+1;
         }
         console.log(this._ch5);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t5/'+ this._i+'/17:00-18:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -296,7 +292,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch5=this._ch5+1;
         }
         console.log(this._ch5);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t5/'+ this._i+'/18:00-19:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -304,7 +300,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch5=this._ch5+1;
         }
         console.log(this._ch5);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t5/'+ this._i+'/19:00-20:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -312,7 +308,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch5=this._ch5+1;
         }
         console.log(this._ch5);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t5/'+ this._i+'/20:00-21:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -320,7 +316,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch5=this._ch5+1;
         }
         console.log(this._ch5);
-        this._show();
+       
       });
     }
 
@@ -332,7 +328,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch6=this._ch6+1;
         }
         console.log(this._ch6);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t6/'+ this._i+'/17:00-18:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -340,7 +336,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch6=this._ch6+1;
         }
         console.log(this._ch6);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t6/'+ this._i+'/18:00-19:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -348,7 +344,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch6=this._ch6+1;
         }
         console.log(this._ch6);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t6/'+ this._i+'/19:00-20:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -356,7 +352,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch6=this._ch6+1;
         }
         console.log(this._ch6);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t6/'+ this._i+'/20:00-21:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -364,7 +360,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch6=this._ch6+1;
         }
         console.log(this._ch6);
-        this._show();
+       
       });
  
     }
@@ -377,7 +373,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch7=this._ch7+1;
         }
         console.log(this._ch7);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t7/'+ this._i+'/17:00-18:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -385,7 +381,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch7=this._ch7+1;
         }
         console.log(this._ch7);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t7/'+ this._i+'/18:00-19:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -393,7 +389,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch7=this._ch7+1;
         }
         console.log(this._ch7);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t7/'+ this._i+'/19:00-20:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -401,7 +397,7 @@ export class TennisflowchartComponent implements OnInit {
           this._ch7=this._ch7+1;
         }
         console.log(this._ch7);
-        this._show();
+       
       });
       await this.afb.list('time_table/tennis/t7/'+ this._i+'/20:00-21:00').valueChanges().subscribe(items => {
         console.log(items[0]);

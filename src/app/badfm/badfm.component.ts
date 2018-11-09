@@ -23,7 +23,13 @@ export class BadfmComponent implements OnInit {
   _ch2 : number;
   _ch3 : number;
   _ch4 : number;
- 
+  _ch5 : number;
+  _ch6 : number;
+  _ch7 : number;
+  _ch8 : number;
+  _ch9 : number;
+  _ch10 : number;
+  
   _object: any;
   _datetime = this._year + "-" + this._month + "-" + this._date;
   _date2 : String;
@@ -64,12 +70,6 @@ flowchartt(){
 flowchartbm(){
   this.router.navigate(['/Badfm'], );
 }
-flowchartbm2(){
-  this.router.navigate(['/badfm2'], );
-}
-flowchartbm3(){
-  this.router.navigate(['/badfm3'], );
-}
 flowcharttm(){
   this.router.navigate(['/Tennisfm'], );
 }
@@ -95,17 +95,32 @@ async  ngOnInit() {
         this.router.navigate([''], );
       }
     });
+
     this.typeChart = 'line';
-    this._ch1=0;
-    this._ch2=0;
-    this._ch3=0;
-    this._ch4=0;
+     this._ch1=0;
+     this._ch2=0;
+     this._ch3=0;
+     this._ch4=0;
+     this._ch5=0;
+    this._ch6=0;
+    this._ch7=0;
+    this._ch8=0;
+    this._ch9=0;
+    this._ch10=0;
+   
+    await this._countB5();
+    await this._countB6();
+    await  this._countB7();
+   
+   await  this._countB1();
+   await  this._countB2();
+   await  this._countB3();
+   await  this._countB4();
+   await this._countB8();
+   await this._countB9();
+   await this._countB10();
+    await  this._show();
     
-  await this._show();
-  await  this._countB1();
-  await  this._countB2();
-  await  this._countB3();
-  await  this._countB4();
   }
   async _countB1(){
     
@@ -117,7 +132,7 @@ async  ngOnInit() {
           this._ch1=this._ch1+1;
         }
         console.log(this._ch1);
-        this._show();
+       
       });
       await this.afb.list('time_table/badminton/b2/'+ this.__date+'/16:00-16:30').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -125,7 +140,7 @@ async  ngOnInit() {
           this._ch1=this._ch1+1;
         }
         console.log(this._ch1);
-        this._show();
+       
       });
       await this.afb.list('time_table/badminton/b3/'+ this.__date+'/16:00-16:30').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -133,7 +148,7 @@ async  ngOnInit() {
           this._ch1=this._ch1+1;
         }
         console.log(this._ch1);
-        this._show();
+       
       });
       await this.afb.list('time_table/badminton/b4/'+ this.__date+'/16:00-16:30').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -141,7 +156,7 @@ async  ngOnInit() {
           this._ch1=this._ch1+1;
         }
         console.log(this._ch1);
-        this._show();
+       
       });
       await this.afb.list('time_table/badminton/b5/'+ this.__date+'/16:00-16:30').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -149,7 +164,7 @@ async  ngOnInit() {
           this._ch1=this._ch1+1;
         }
         console.log(this._ch1);
-        this._show();
+       
       });
       await this.afb.list('time_table/badminton/b6/'+ this.__date+'/16:00-16:30').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -157,7 +172,7 @@ async  ngOnInit() {
           this._ch1=this._ch1+1;
         }
         console.log(this._ch1);
-        this._show();
+       
       });
       await this.afb.list('time_table/badminton/b7/'+ this.__date+'/16:00-16:30').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -165,7 +180,7 @@ async  ngOnInit() {
           this._ch1=this._ch1+1;
         }
         console.log(this._ch1);
-        this._show();
+       
       });
       await this.afb.list('time_table/badminton/b8/'+ this.__date+'/16:00-16:30').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -173,7 +188,7 @@ async  ngOnInit() {
           this._ch1=this._ch1+1;
         }
         console.log(this._ch1);
-        this._show();
+       
       });
       await this.afb.list('time_table/badminton/b9/'+ this.__date+'/16:00-16:30').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -181,7 +196,7 @@ async  ngOnInit() {
           this._ch1=this._ch1+1;
         }
         console.log(this._ch1);
-        this._show();
+       
       });
       await this.afb.list('time_table/badminton/b10/'+ this.__date+'/16:00-16:30').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -189,7 +204,7 @@ async  ngOnInit() {
           this._ch1=this._ch1+1;
         }
         console.log(this._ch1);
-        this._show();
+       
       });
       
       
@@ -206,7 +221,7 @@ async  ngOnInit() {
              this._ch2=this._ch2+1;
            }
            console.log(this._ch2);
-           this._show();
+          
          });
          await this.afb.list('time_table/badminton/b2/'+ this.__date+'/16:30-17:00').valueChanges().subscribe(items => {
           console.log(items[0]);
@@ -214,7 +229,7 @@ async  ngOnInit() {
             this._ch2=this._ch2+1;
           }
           console.log(this._ch2);
-           this._show();
+          
         });
         await this.afb.list('time_table/badminton/b3/'+ this.__date+'/16:30-17:00').valueChanges().subscribe(items => {
           console.log(items[0]);
@@ -222,7 +237,7 @@ async  ngOnInit() {
             this._ch2=this._ch2+1;
           }
           console.log(this._ch2);
-           this._show();
+          
         });
       await this.afb.list('time_table/badminton/b10/'+ this.__date+'/16:30-17:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -230,7 +245,7 @@ async  ngOnInit() {
           this._ch2=this._ch2+1;
         }
         console.log(this._ch2);
-           this._show();
+          
       });
       await this.afb.list('time_table/badminton/b4/'+ this.__date+'/16:30-17:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -238,7 +253,7 @@ async  ngOnInit() {
           this._ch2=this._ch2+1;
         }
         console.log(this._ch2);
-           this._show();
+          
       });
       await this.afb.list('time_table/badminton/b5/'+ this.__date+'/16:30-17:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -246,7 +261,7 @@ async  ngOnInit() {
           this._ch2=this._ch2+1;
         }
         console.log(this._ch2);
-           this._show();
+          
       });
       await this.afb.list('time_table/badminton/b6/'+ this.__date+'/16:30-17:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -254,7 +269,7 @@ async  ngOnInit() {
           this._ch2=this._ch2+1;
         }
         console.log(this._ch2);
-           this._show();
+          
       });
       await this.afb.list('time_table/badminton/7/'+ this.__date+'/16:30-17:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -262,7 +277,7 @@ async  ngOnInit() {
           this._ch2=this._ch2+1;
         }
         console.log(this._ch2);
-           this._show();
+          
       });
       await this.afb.list('time_table/badminton/b8/'+ this.__date+'/16:30-17:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -270,7 +285,7 @@ async  ngOnInit() {
           this._ch2=this._ch2+1;
         }
         console.log(this._ch2);
-           this._show();
+          
       });
       await this.afb.list('time_table/badminton/b9/'+ this.__date+'/16:30-17:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -278,7 +293,7 @@ async  ngOnInit() {
           this._ch2=this._ch2+1;
         }
         console.log(this._ch2);
-           this._show();
+          
       });
       await this.afb.list('time_table/badminton/10/'+ this.__date+'/16:30-17:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -286,7 +301,7 @@ async  ngOnInit() {
           this._ch2=this._ch2+1;
         }
         console.log(this._ch2);
-           this._show();
+          
       });
      
     }
@@ -301,7 +316,7 @@ async  ngOnInit() {
           this._ch3=this._ch3+1;
         }
         console.log(this._ch3);
-           this._show();
+          
       });
       await this.afb.list('time_table/badminton/b2/'+ this.__date+'/17:00-17:30').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -309,7 +324,7 @@ async  ngOnInit() {
           this._ch3=this._ch3+1;
         }
         console.log(this._ch3);
-           this._show();
+          
       });
       await this.afb.list('time_table/badminton/b3/'+ this.__date+'/17:00-17:30').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -317,7 +332,7 @@ async  ngOnInit() {
           this._ch3=this._ch3+1;
         }
         console.log(this._ch3);
-           this._show();
+          
       });
       await this.afb.list('time_table/badminton/b4/'+ this.__date+'/17:00-17:30').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -325,7 +340,7 @@ async  ngOnInit() {
           this._ch3=this._ch3+1;
         }
         console.log(this._ch3);
-           this._show();
+          
       });
       await this.afb.list('time_table/badminton/b5/'+ this.__date+'/17:00-17:30').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -333,7 +348,7 @@ async  ngOnInit() {
           this._ch3=this._ch3+1;
         }
         console.log(this._ch3);
-           this._show();
+          
       });
       await this.afb.list('time_table/badminton/b6/'+ this.__date+'/17:00-17:30').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -341,7 +356,7 @@ async  ngOnInit() {
           this._ch3=this._ch3+1;
         }
         console.log(this._ch3);
-           this._show();
+          
       });
       await this.afb.list('time_table/badminton/b7/'+ this.__date+'/17:00-17:30').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -349,7 +364,7 @@ async  ngOnInit() {
           this._ch3=this._ch3+1;
         }
         console.log(this._ch3);
-           this._show();
+          
       });
       await this.afb.list('time_table/badminton/b8/'+ this.__date+'/17:00-17:30').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -357,7 +372,7 @@ async  ngOnInit() {
           this._ch3=this._ch3+1;
         }
         console.log(this._ch3);
-           this._show();
+          
       });
       await this.afb.list('time_table/badminton/b9/'+ this.__date+'/17:00-17:30').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -365,7 +380,7 @@ async  ngOnInit() {
           this._ch3=this._ch3+1;
         }
         console.log(this._ch3);
-           this._show();
+          
       });
       await this.afb.list('time_table/badminton/b10/'+ this.__date+'/17:00-17:30').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -373,7 +388,7 @@ async  ngOnInit() {
           this._ch3=this._ch3+1;
         }
         console.log(this._ch3);
-           this._show();
+          
       });
       
     }
@@ -388,7 +403,7 @@ async  ngOnInit() {
           this._ch4=this._ch4+1;
         }
         console.log(this._ch4);
-           this._show();
+          
       });
       await this.afb.list('time_table/badminton/b2/'+ this.__date+'/17:30-18:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -396,7 +411,7 @@ async  ngOnInit() {
           this._ch4=this._ch4+1;
         }
         console.log(this._ch4);
-           this._show();
+          
       });
       await this.afb.list('time_table/badminton/b3/'+ this.__date+'/17:30-18:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -404,7 +419,7 @@ async  ngOnInit() {
           this._ch4=this._ch4+1;
         }
         console.log(this._ch4);
-           this._show();
+          
       });
       await this.afb.list('time_table/badminton/b4/'+ this.__date+'/17:30-18:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -412,7 +427,7 @@ async  ngOnInit() {
           this._ch4=this._ch4+1;
         }
         console.log(this._ch4);
-           this._show();
+          
       });
       await this.afb.list('time_table/badminton/b5/'+ this.__date+'/17:30-18:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -420,7 +435,7 @@ async  ngOnInit() {
           this._ch4=this._ch4+1;
         }
         console.log(this._ch4);
-           this._show();
+          
       });
       await this.afb.list('time_table/badminton/b6/'+ this.__date+'/17:30-18:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -428,7 +443,7 @@ async  ngOnInit() {
           this._ch4=this._ch4+1;
         }
         console.log(this._ch4);
-           this._show();
+          
       });
       await this.afb.list('time_table/badminton/b7/'+ this.__date+'/17:30-18:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -442,7 +457,7 @@ async  ngOnInit() {
           this._ch4=this._ch4+1;
         }
         console.log(this._ch4);
-           this._show();
+          
       });
       await this.afb.list('time_table/badminton/b9/'+ this.__date+'/17:30-18:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -450,7 +465,7 @@ async  ngOnInit() {
           this._ch4=this._ch4+1;
         }
         console.log(this._ch4);
-           this._show();
+          
       });
       await this.afb.list('time_table/badminton/b10/'+ this.__date+'/17:30-18:00').valueChanges().subscribe(items => {
         console.log(items[0]);
@@ -458,22 +473,540 @@ async  ngOnInit() {
           this._ch4=this._ch4+1;
         }
         console.log(this._ch4);
-           this._show();
+       
       });
      
     }
   }
- 
+     async _countB5(){
+    
+      for(this.i=1;this.i<32;this.i++){
+        this.__date=this._year + "-" + this._month + "-" + this.i;
+        await this.afb.list('time_table/badminton/b1/'+ this.__date+'/18:00-18:30').valueChanges().subscribe(items => {
+          console.log(items[0]);
+           if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+            this._ch5=this._ch5+1;
+          }
+          console.log(this._ch5);
+         
+        });
+        await this.afb.list('time_table/badminton/b2/'+ this.__date+'/18:00-18:30').valueChanges().subscribe(items => {
+          console.log(items[0]);
+           if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+            this._ch5=this._ch5+1;
+          }
+          console.log(this._ch5);
+         
+        });
+        await this.afb.list('time_table/badminton/b3/'+ this.__date+'/18:00-18:30').valueChanges().subscribe(items => {
+          console.log(items[0]);
+           if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+            this._ch5=this._ch5+1;
+          }
+          console.log(this._ch5);
+         
+        });
+        await this.afb.list('time_table/badminton/b4/'+ this.__date+'/18:00-18:30').valueChanges().subscribe(items => {
+          console.log(items[0]);
+           if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+            this._ch5=this._ch5+1;
+          }
+          console.log(this._ch5);
 
+        });
+        await this.afb.list('time_table/badminton/b5/'+ this.__date+'/18:00-18:30').valueChanges().subscribe(items => {
+          console.log(items[0]);
+           if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+            this._ch5=this._ch5+1;
+          }
+          console.log(this._ch5);
+          
+        });
+        await this.afb.list('time_table/badminton/b6/'+ this.__date+'/18:00-18:30').valueChanges().subscribe(items => {
+          console.log(items[0]);
+           if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+            this._ch5=this._ch5+1;
+          }
+          console.log(this._ch5);
+         
+        });
+        await this.afb.list('time_table/badminton/b7/'+ this.__date+'/18:00-18:30').valueChanges().subscribe(items => {
+          console.log(items[0]);
+           if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+            this._ch5=this._ch5+1;
+          }
+          console.log(this._ch5);
+         
+        });
+        await this.afb.list('time_table/badminton/b8/'+ this.__date+'/18:00-18:30').valueChanges().subscribe(items => {
+          console.log(items[0]);
+           if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+            this._ch5=this._ch5+1;
+          }
+          console.log(this._ch5);
+         
+        });
+        await this.afb.list('time_table/badminton/b9/'+ this.__date+'/18:00-18:30').valueChanges().subscribe(items => {
+          console.log(items[0]);
+           if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+            this._ch5=this._ch5+1;
+          }
+          console.log(this._ch5);
+         
+        });
+        await this.afb.list('time_table/badminton/b10/'+ this.__date+'/18:00-18:30').valueChanges().subscribe(items => {
+          console.log(items[0]);
+           if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+            this._ch5=this._ch5+1;
+          }
+          console.log(this._ch5);
+         
+        });
+      
+      }
+      
+    }
+   
+  async _countB6(){
+      
+    for(this.i=1;this.i<32;this.i++){
+      this.__date=this._year + "-" + this._month + "-" + this.i;
+      await this.afb.list('time_table/badminton/b1/'+ this.__date+'/18:30-19:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch6=this._ch6+1;
+        }
+        console.log(this._ch6);
+       
+      });
+      await this.afb.list('time_table/badminton/b2/'+ this.__date+'/18:30-19:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch6=this._ch6+1;
+        }
+        console.log(this._ch6);
+       
+      });
+      await this.afb.list('time_table/badminton/b3/'+ this.__date+'/18:30-19:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch6=this._ch6+1;
+        }
+        console.log(this._ch6);
+       
+      });
+      await this.afb.list('time_table/badminton/b4/'+ this.__date+'/18:30-19:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch6=this._ch6+1;
+        }
+        console.log(this._ch6);
+       
+      });
+      await this.afb.list('time_table/badminton/b5/'+ this.__date+'/18:30-19:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch6=this._ch6+1;
+        }
+        console.log(this._ch6);
+       
+      });
+      await this.afb.list('time_table/badminton/b6/'+ this.__date+'/18:30-19:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch6=this._ch6+1;
+        }
+        console.log(this._ch6);
+       
+      });
+      await this.afb.list('time_table/badminton/b7/'+ this.__date+'/18:30-19:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch6=this._ch6+1;
+        }
+        console.log(this._ch6);
+       
+      });
+      await this.afb.list('time_table/badminton/b8/'+ this.__date+'/18:30-19:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch6=this._ch6+1;
+        }
+        console.log(this._ch6);
+       
+      });
+      await this.afb.list('time_table/badminton/b9/'+ this.__date+'/18:30-19:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch6=this._ch6+1;
+        }
+        console.log(this._ch6);
+       
+      });
+      await this.afb.list('time_table/badminton/b10/'+ this.__date+'/18:30-19:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch6=this._ch6+1;
+        }
+        console.log(this._ch6);
+       
+      });
+    }
+  }
+  async _countB7(){
+    
+    for(this.i=1;this.i<32;this.i++){
+      this.__date=this._year + "-" + this._month + "-" + this.i;
+      await this.afb.list('time_table/badminton/b1/'+ this.__date+'/19:00-19:30').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch7=this._ch7+1;
+        }
+        console.log(this._ch7);
+       
+      });
+      await this.afb.list('time_table/badminton/b2/'+ this.__date+'/19:00-19:30').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch7=this._ch7+1;
+        }
+        console.log(this._ch7);
+       
+      });
+      await this.afb.list('time_table/badminton/b3/'+ this.__date+'/19:00-19:30').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch7=this._ch7+1;
+        }
+        console.log(this._ch7);
+       
+      });
+      await this.afb.list('time_table/badminton/b4/'+ this.__date+'/19:00-19:30').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch7=this._ch7+1;
+        }
+        console.log(this._ch7);
+       
+      });
+      await this.afb.list('time_table/badminton/b5/'+ this.__date+'/19:00-19:30').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch7=this._ch7+1;
+        }
+        console.log(this._ch7);
+       
+      });
+      await this.afb.list('time_table/badminton/b6/'+ this.__date+'/19:00-19:30').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch7=this._ch7+1;
+        }
+        console.log(this._ch7);
+       
+      });
+      await this.afb.list('time_table/badminton/b7/'+ this.__date+'/19:00-19:30').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch7=this._ch7+1;
+        }
+        console.log(this._ch7);
+       
+      });
+      await this.afb.list('time_table/badminton/b8/'+ this.__date+'/19:00-19:30').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch7=this._ch7+1;
+        }
+        console.log(this._ch7);
+       
+      });
+      await this.afb.list('time_table/badminton/b9/'+ this.__date+'/19:00-19:30').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch7=this._ch7+1;
+        }
+        console.log(this._ch7);
+       
+      });
+      await this.afb.list('time_table/badminton/b10/'+ this.__date+'/19:00-19:30').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch7=this._ch7+1;
+        }
+        console.log(this._ch7);
+       
+       
+      });
+    }
+  }
+  async _countB8(){
+    
+    for(this.i=1;this.i<32;this.i++){
+      this.__date=this._year + "-" + this._month + "-" + this.i;
+      await this.afb.list('time_table/badminton/b1/'+ this.__date+'/19:30-20:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch8=this._ch8+1;
+        }
+        console.log(this._ch8);
+       
+      });
+      await this.afb.list('time_table/badminton/b2/'+ this.__date+'/19:30-20:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch8=this._ch8+1;
+        }
+        console.log(this._ch8);
+       
+      });
+      await this.afb.list('time_table/badminton/b3/'+ this.__date+'/19:30-20:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch8=this._ch8+1;
+        }
+        console.log(this._ch8);
+       
+      });
+      await this.afb.list('time_table/badminton/b4/'+ this.__date+'/19:30-20:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch8=this._ch8+1;
+        }
+        console.log(this._ch8);
+       
+      });
+      await this.afb.list('time_table/badminton/b5/'+ this.__date+'/19:30-20:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch8=this._ch8+1;
+        }
+        console.log(this._ch8);
+       
+      });
+      await this.afb.list('time_table/badminton/b6/'+ this.__date+'/19:30-20:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch8=this._ch8+1;
+        }
+        console.log(this._ch8);
+       
+      });
+      await this.afb.list('time_table/badminton/b7/'+ this.__date+'/19:30-20:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch8=this._ch8+1;
+        }
+        console.log(this._ch8);
+       
+      });
+      await this.afb.list('time_table/badminton/b8/'+ this.__date+'/19:30-20:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch8=this._ch8+1;
+        }
+        console.log(this._ch8);
+       
+      });
+      await this.afb.list('time_table/badminton/b9/'+ this.__date+'/19:30-20:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch8=this._ch8+1;
+        }
+        console.log(this._ch8);
+       
+      });
+      await this.afb.list('time_table/badminton/b10/'+ this.__date+'/19:30-20:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch8=this._ch8+1;
+        }
+        console.log(this._ch8);
+       
+      });
+    }
+  }
+  async _countB9(){
+  
+    for(this.i=1;this.i<32;this.i++){
+      this.__date=this._year + "-" + this._month + "-" + this.i;
+      await this.afb.list('time_table/badminton/b1/'+ this.__date+'/20:00-20:30').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch9=this._ch9+1;
+        }
+        console.log(this._ch9);
+       
+      });
+      await this.afb.list('time_table/badminton/b2/'+ this.__date+'/20:00-20:30').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch9=this._ch9+1;
+        }
+        console.log(this._ch9);
+       
+      });
+      await this.afb.list('time_table/badminton/b3/'+ this.__date+'/20:00-20:30').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch9=this._ch9+1;
+        }
+        console.log(this._ch9);
+       
+      });
+      await this.afb.list('time_table/badminton/b4/'+ this.__date+'/20:00-20:30').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch9=this._ch9+1;
+        }
+        console.log(this._ch9);
+       
+      });
+      await this.afb.list('time_table/badminton/b5/'+ this.__date+'/20:00-20:30').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch9=this._ch9+1;
+        }
+        console.log(this._ch9);
+       
+      });
+      await this.afb.list('time_table/badminton/b6/'+ this.__date+'/20:00-20:30').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch9=this._ch9+1;
+        }
+        console.log(this._ch9);
+       
+      });
+      await this.afb.list('time_table/badminton/b7/'+ this.__date+'/20:00-20:30').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch9=this._ch9+1;
+        }
+        console.log(this._ch9);
+       
+      });
+      await this.afb.list('time_table/badminton/b8/'+ this.__date+'/20:00-20:30').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch9=this._ch9+1;
+        }
+        console.log(this._ch9);
+       
+      });
+      await this.afb.list('time_table/badminton/b9/'+ this.__date+'/20:00-20:30').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch9=this._ch9+1;
+        }
+        console.log(this._ch9);
+       
+      });
+      await this.afb.list('time_table/badminton/b10/'+ this.__date+'/20:00-20:30').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch9=this._ch9+1;
+        }
+        console.log(this._ch9);
+       
+      });
+    }
+  }
+  async _countB10(){
+    
+    for(this.i=1;this.i<32;this.i++){
+      this.__date=this._year + "-" + this._month + "-" + this.i;
+      await this.afb.list('time_table/badminton/b1/'+ this.__date+'/20:30-21:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch10=this._ch10+1;
+        }
+        console.log(this._ch10);
+       
+      });
+      await this.afb.list('time_table/badminton/b2/'+ this.__date+'/20:30-21:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch10=this._ch10+1;
+        }
+        console.log(this._ch10);
+       
+      });
+      await this.afb.list('time_table/badminton/b3/'+ this.__date+'/20:30-21:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch10=this._ch10+1;
+        }
+        console.log(this._ch10);
+       
+      });
+      await this.afb.list('time_table/badminton/b4/'+ this.__date+'/20:30-21:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch10=this._ch10+1;
+        }
+        console.log(this._ch10);
+       
+      });
+      await this.afb.list('time_table/badminton/b5/'+ this.__date+'/20:30-21:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch10=this._ch10+1;
+        }
+        console.log(this._ch10);
+       
+      });
+      await this.afb.list('time_table/badminton/b6/'+ this.__date+'/20:30-21:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch10=this._ch10+1;
+        }
+        console.log(this._ch10);
+       
+      });
+      await this.afb.list('time_table/badminton/b7/'+ this.__date+'/20:30-21:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch10=this._ch10+1;
+        }
+        console.log(this._ch10);
+       
+      });
+      await this.afb.list('time_table/badminton/b8/'+ this.__date+'/20:30-21:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch10=this._ch10+1;
+        }
+        console.log(this._ch10);
+       
+      });
+      await this.afb.list('time_table/badminton/b9/'+ this.__date+'/20:30-21:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch10=this._ch10+1;
+        }
+        console.log(this._ch10);
+       
+      });
+      await this.afb.list('time_table/badminton/b10/'+ this.__date+'/20:30-21:00').valueChanges().subscribe(items => {
+        console.log(items[0]);
+         if((items[0]=='true'&&items[1]=='true')||(items[0]=='true'&&items[2]=='true')){
+          this._ch10=this._ch10+1;
+        }
+        console.log(this._ch10);
+        this._show();
+      });
+    }
+  }
   async _show(){
     this.dataChart = {
-     labels: ["16.00-16.30","16.30-17.00", "17.00-17.30", "17.30-18.00",],
+     labels: ["16.00-16.30","16.30-17.00", "17.00-17.30", "17.30-18.00","18.00-18.30","18.30-19.00","19.00-19.30","19.30-20.00","20.00-20.30","20.30-21.00",],
      
       datasets: [
         {
          
-          data: [this._ch1, this._ch2,this._ch3,this._ch4,],
-         
+          data: [this._ch1, this._ch2,this._ch3,this._ch4,this._ch5, this._ch6,this._ch7,this._ch8,this._ch9, this._ch10,],
+          backgroundColor : ['#1abc9c', '#3498db', '#9b59b6', '#B8860B', '#f39c12','#339900','#6A5ACD']
         }
       ]
     };

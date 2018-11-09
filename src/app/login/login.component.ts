@@ -48,8 +48,7 @@ export class LoginComponent implements OnInit {
        this.openDialog();
 
      }
-    // console.log('Show:', user.email);
-    // console.log('Show:', this.datalist);
+   
     try {
       this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password).then(value => {
         this.isStudent(value.user.uid);
@@ -120,7 +119,6 @@ export class LoginComponent implements OnInit {
     });
   }
   checkStatus(s) {
-   // if (s == 'Outsider' || s == 'Personal' || s == 'Student') {
     if (s == 'Admin') {
       this.router.navigate(['/typeadmin'])
     } else if (s == 'Employee' ) {
