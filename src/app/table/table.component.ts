@@ -75,72 +75,14 @@ export class TableComponent implements OnInit {
 
     let dataSet: any;
     let dataSet2: any;
-    //var status;s
-    // this._object = this.afb.object('time_table/badminton/' + b + '/' + this._datetime).valueChanges();
-    // this._object.subscribe(data => {
-    //   console.log(data)
-    //   if (data == null) {
-    //     // ยังไม่มีรายการ อะไรเลยในวันนั้น
-    //     this.router.navigate(['/reservation/badminton/' + b + '/' + range]);
-    //     time = null;
-    //   } else {
-    //     //มีแล้ว
-    //     let key = Object.keys(data);
-        
-    //     let list = [];
-    //     for (var i = 0; i < key.length; i++) {
-    //       list.push(key[i]);
-    //     }
-
-    //     if(list.includes(range)){
-    //       //ยกเลิก
-    //       console.log('ยกเลิก')
-    //       this.openDialog(time,b);
-    //       //this.router.navigate(['/cancel/badminton/' + b + '/' + range]);
-    //       time = null;
-          
-    //     }else{
-    //       //จอง
-
-    //       this.openDialog1(time,b);
-          
-    //       //this.router.navigate(['/reservation/badminton/' + b + '/' + range]);
-    //       console.log('จอง')
-    //       time = null;
-    //     }
-    //   }
-    // })
-
     
-    // this.afb.object('time_table/badminton/' + b + '/' + this._datetime).valueChanges().subscribe(
-    //   data => {
-    //     //dataSet = data;
-    //     if (data == null) {
-    //      this.openDialog1(time,b);
-    //       //this.router.navigate(['/reservation/badminton/' + b + '/' + range]);
-    //       console.log('จอง')
-    //       time = null;
-    //     } else {
-    //       this.afb.object('time_table/badminton/' + b + '/' + this._datetime + '/' + range).valueChanges().subscribe(
-    //         data2 => {
-    //           if (data2 !== null) {
-    //             console.log('ยกเลิก')
-    //             this.openDialog(time,b);
-    //             //this.router.navigate(['/cancel/badminton/' + b + '/' + range]);
-    //             time = null;
-    //           } 
-    //         })
-    //     }
-
-    //   }
-    // )
 
     this._object = this.afb.object('time_table/badminton/' + b + '/' + this._datetime).valueChanges();
     this._object.subscribe(data => {
       console.log(data)
       if (data == null) {
         // ยังไม่มีรายการ อะไรเลยในวันนั้น
-        //this.router.navigate(['/reservation/badminton/' + b + '/' + range]);
+       
         this.openDialog1(time,b);
         time = null;
         this.break();
@@ -156,13 +98,13 @@ export class TableComponent implements OnInit {
           //ยกเลิก
           console.log('ยกเลิก')
           this.openDialog(time,b);
-          //this.router.navigate(['/cancel/badminton/' + b + '/' + range]);
+         
           time = null;
           this.break();
         }
         else{
           //จอง
-          //this.router.navigate(['/reservation/badminton/' + b + '/' + range]);
+          
           this.openDialog1(time,b);
           console.log('จอง')
           time = null;
@@ -170,7 +112,7 @@ export class TableComponent implements OnInit {
           
         }
       }
-      //this.dialog.closeAll();
+      
     })
 
   }
@@ -182,7 +124,7 @@ break(){
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      //this.animal = result;
+      
     });
   }
 
@@ -191,7 +133,7 @@ break(){
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      //this.animal = result;
+      
     });
   }
 

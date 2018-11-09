@@ -50,7 +50,7 @@ export class Tablebadminton2Component implements OnInit {
         console.log(data)
         if (data == null) {
           // ยังไม่มีรายการ อะไรเลยในวันนั้น
-          //this.router.navigate(['/reservation/badminton/' + b + '/' + range]);
+          
           this.openDialog1(time,b);
           time = null;
           this.break();
@@ -66,12 +66,12 @@ export class Tablebadminton2Component implements OnInit {
             //ยกเลิก
             console.log('ยกเลิก')
             this.openDialog(time,b);
-            //this.router.navigate(['/cancel/badminton/' + b + '/' + range]);
+            
             time = null;
             this.break();
           }else{
             //จอง
-            //this.router.navigate(['/reservation/badminton/' + b + '/' + range]);
+           
             this.openDialog1(time,b);
             console.log('จอง')
             time = null;
@@ -113,7 +113,7 @@ export class Tablebadminton2Component implements OnInit {
   
       dialogRef.afterClosed().subscribe(result => {
         console.log('The dialog was closed');
-        //this.animal = result;
+        
       });
     }
   
@@ -122,7 +122,7 @@ export class Tablebadminton2Component implements OnInit {
   
       dialogRef.afterClosed().subscribe(result => {
         console.log('The dialog was closed');
-        //this.animal = result;
+        
       });
     }
 

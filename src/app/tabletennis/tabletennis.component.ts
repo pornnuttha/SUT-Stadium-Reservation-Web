@@ -51,7 +51,7 @@ export class TabletennisComponent implements OnInit {
   
       let dataSet: any;
       let dataSet2: any;
-      //var status;s
+      
       this._object = this.afb.object('time_table/tennis/' + b + '/' + this._datetime).valueChanges();
       this._object.subscribe(data => {
         console.log(data)
@@ -72,12 +72,12 @@ export class TabletennisComponent implements OnInit {
             //ยกเลิก
             console.log('ยกเลิก')
             this.openDialog(time,b);
-           // this.router.navigate(['/cancel/tennis/' + b + '/' + range]);
+          
             time = null;
             this.break();
           }else{
             //จอง
-            //this.router.navigate(['/reservation/tennis/' + b + '/' + range]);
+           
             this.openDialog1(time,b);
             console.log('จอง')
             time = null;
@@ -115,7 +115,7 @@ export class TabletennisComponent implements OnInit {
   
       dialogRef.afterClosed().subscribe(result => {
         console.log('The dialog was closed');
-        //this.animal = result;
+        
       });
     }
   
@@ -124,7 +124,7 @@ export class TabletennisComponent implements OnInit {
   
       dialogRef.afterClosed().subscribe(result => {
         console.log('The dialog was closed');
-        //this.animal = result;
+       
       });
     }
 
